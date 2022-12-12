@@ -1,0 +1,17 @@
+{% extends "accounts/base.html" %}
+{% load crispy_forms_tags %} 
+{% block content %}
+<div class="content-section">
+    <h1 align="center">About the User</h1>
+    <br>
+    <div class="media">
+        <div class="media-body">
+            <h4 class="text-secondary">Email :{{ profile_data.email }}</h4>
+            <h4 class="text-secondary">Date Joined :{{ profile_data.date_joined }}</h4>
+            <h4 class="text-secondary">First Name :{{ profile_data.name }}</h4>
+            <h4 class="text-secondary">Last Name :{{ profile_data.role }}</h4>
+        </div>
+    </div>
+
+</div>
+{% endblock content %}

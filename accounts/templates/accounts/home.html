@@ -1,0 +1,16 @@
+{% extends "accounts/base.html" %}
+{% block content %}
+    {% for note in notes %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="{% url 'notes-detail' note.id %}">{{ note.author }}</a>
+              <small class="text-muted">{{ note.date_posted }}</small>
+            </div>
+            <h2><a class="article-title" href="{% url 'notes-detail' note.id %}">{{ note.title }}</a></h2>
+            <p class="article-content">{{ note.content }}</p>
+          </div>
+          <small class="text-muted">{{ note.author.role }}</small>
+        </article>
+    {% endfor %}
+{% endblock content %}
